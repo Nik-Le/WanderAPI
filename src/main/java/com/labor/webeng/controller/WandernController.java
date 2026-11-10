@@ -21,4 +21,5 @@ public class WandernController {
     public Location getCoordinates(@PathVariable String location) {
         return service.getCoordinates(location);
     }
+
 }
