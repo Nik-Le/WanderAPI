@@ -1,6 +1,6 @@
 package com.labor.webeng.controller;
 
-import com.labor.webeng.model.Location;
+import com.labor.webeng.model.Wandern;
 import com.labor.webeng.service.WandernService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,9 +17,9 @@ public class WandernController {
         this.service = service;
     }
 
-    @GetMapping("/{location}")
-    public Location getCoordinates(@PathVariable String location) {
-        return service.getCoordinates(location);
+    @GetMapping("/{city}")
+    public Wandern getRecommendation(@PathVariable String city) {
+        return service.getRecommendation(city);
     }
 
 }
